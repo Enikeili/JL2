@@ -101,7 +101,7 @@ public class MyExpressionEvaluation
 				}
 				else
 				{
-					while(new MySymbolLine(stack.peek()).priority() >= current_character.priority())
+					while(!stack.empty() && new MySymbolLine(stack.peek()).priority() >= current_character.priority())
 					{
 						result = result+stack.pop()+" ";
 					}
